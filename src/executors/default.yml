@@ -3,6 +3,7 @@ description: >
   If you do not require an executor, you can simply delete this directory.
 docker:
   - image: 'cimg/node:<<parameters.tag>>'
+    resource_class: small
 parameters:
   tag:
     default: lts
