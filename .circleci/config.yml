@@ -17,6 +17,7 @@ workflows:
           filters: *filters
       - orb-tools/review:
           filters: *filters
+          exclude: RC008
       - shellcheck/check:
           filters: *filters
       - orb-tools/publish:
@@ -33,3 +34,5 @@ workflows:
           vcs-type: << pipeline.project.type >>
           requires: [orb-tools/publish]
           filters: *filters
+
+# VS Code Extension Version: 1.3.0

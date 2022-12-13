@@ -24,6 +24,8 @@ workflows:
       # Make sure to include "filters: *filters" in every test job you want to run as part of your deployment.
       - command-tests:
           filters: *filters
+      - my-orb-2/hello:
+          to: Jenny  
       - orb-tools/pack:
           filters: *filters
       - orb-tools/publish:
@@ -40,4 +42,4 @@ workflows:
             tags:
               only: /^v[0-9]+\.[0-9]+\.[0-9]+$/
 
-# VS Code Extension Version: 1.0.0
+# VS Code Extension Version: 1.1.1
