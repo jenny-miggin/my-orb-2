@@ -1,13 +1,29 @@
 description: >
   Sample description
 # What will this job do?
-executor:
-  name: default
+
 parameters:
   to:
     type: string
     default: "World"
     description: "Hello to whom?"
+  resource_class:
+    default: large
+    description: Configure the executor resource class
+    enum:
+    - small
+    - medium
+    - medium+
+    - large
+    - xlarge
+    - 2xlarge
+    - 2xlarge+
+    type: enum
+
+executor:
+  name: default
+  resource_class: << parameters.resource_class >>
+
 steps:
   - greet:
       to: << parameters.to >>
