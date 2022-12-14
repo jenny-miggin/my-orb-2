@@ -2,9 +2,8 @@ description: >
   Sample description
 # What will this job do?
 
-executor: default
-
-
+executor: 
+  name: default
 
 parameters:
   to:

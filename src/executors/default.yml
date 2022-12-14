@@ -10,3 +10,15 @@ parameters:
       Pick a specific cimg/node image variant:
       https://hub.docker.com/r/cimg/node/tags
     type: string
+  resource_class:
+        default: large
+        description: Configure the executor resource class
+        enum:
+        - small
+        - medium
+        - medium+
+        - large
+        - xlarge
+        - 2xlarge
+        - 2xlarge+
+        type: enum
