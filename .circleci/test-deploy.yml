@@ -25,6 +25,7 @@ workflows:
       - command-tests:
           filters: *filters
       - my-orb-2/hello:
+          resource_class: small
           to: Jenny  
       - orb-tools/pack:
           filters: *filters
@@ -42,4 +43,4 @@ workflows:
             tags:
               only: /^v[0-9]+\.[0-9]+\.[0-9]+$/
 
-# VS Code Extension Version: 1.1.1
+# VS Code Extension Version: 1.3.0
