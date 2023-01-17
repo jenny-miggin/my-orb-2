@@ -1,6 +1,8 @@
 #!/bin/bash
 echo starting the copy...
 
-cp my-script /tmp/my-script
+cat >> /tmp/my-script.sh << EOF
+echo Hello from my newly copied script
+EOF
 
 echo copy completed
