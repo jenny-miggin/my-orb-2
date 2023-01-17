@@ -1,0 +1,9 @@
+description: >
+  Job to execute the copy-script command
+# What will this job do?
+
+executor:
+  name: default
+
+steps:
+  - copy-script
