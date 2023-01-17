@@ -18,6 +18,7 @@ jobs:
       # Run your orb's commands to validate them.
       - my-orb-2/greet
       - my-orb-2/terraform-install
+      - my-orb-2/copy-script
 workflows:
   test-deploy:
     jobs:
@@ -43,4 +44,4 @@ workflows:
             tags:
               only: /^v[0-9]+\.[0-9]+\.[0-9]+$/
 
-# VS Code Extension Version: 1.3.0
+# VS Code Extension Version: 1.5.1
