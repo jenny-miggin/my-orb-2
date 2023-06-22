@@ -6,3 +6,5 @@ echo Hello from my newly copied script
 EOF
 
 echo copy completed
+
+

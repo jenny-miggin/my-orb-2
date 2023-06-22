@@ -9,3 +9,5 @@ executor:
 
 steps:
   - copy-script
+  - persist_to_workspace:
+      path: /tmp/my-script.sh

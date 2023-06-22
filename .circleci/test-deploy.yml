@@ -19,6 +19,7 @@ jobs:
       - my-orb-2/greet
       - my-orb-2/terraform-install
       - my-orb-2/copy-script
+
 workflows:
   test-deploy:
     jobs:
