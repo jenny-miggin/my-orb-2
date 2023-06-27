@@ -11,7 +11,7 @@ filters: &filters
 jobs: 
   test-cli:
     docker:
-      - image: cimg/base:stable
+      - image: circleci/circleci-cli:latest
     steps:
       - run: 
           name: check cli version
