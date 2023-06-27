@@ -26,8 +26,8 @@ workflows:
       - orb-tools/pack:
           filters: *filters
           pre-steps:
-            run: 
-              command: circleci version
+            - run: 
+                command: circleci version
       - orb-tools/review:
           filters: *filters
           exclude: RC008
