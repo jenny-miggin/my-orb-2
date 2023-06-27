@@ -8,9 +8,19 @@ filters: &filters
   tags:
     only: /.*/
 
+jobs: 
+  test-cli:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run: 
+          name: check cli version
+          command: circleci version
+
 workflows:
   lint-pack:
     jobs:
+      - test-cli
       - orb-tools/lint:
           filters: *filters
       - orb-tools/pack:
