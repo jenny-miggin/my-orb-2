@@ -31,7 +31,8 @@ workflows:
           to: Jenny
       - orb-tools/pack:
           filters: *filters
-          tag: 0.1.27054
+          pre-steps:
+            run: circleci version
       - orb-tools/publish:
           orb-name: jmi-space/my-orb-2
           vcs-type: << pipeline.project.type >>
