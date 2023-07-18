@@ -7,6 +7,10 @@ usage:
   version: 2.1
   orbs:
     <orb-name>: <namespace>/<orb-name>@1.2.3
+  parameters:
+    my-param:
+      type: string
+      default: "hello"
   workflows:
     use-my-orb:
       jobs:
