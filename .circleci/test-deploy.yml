@@ -18,12 +18,6 @@ jobs:
       # Run your orb's commands to validate them.
       - my-orb-2/greet
 
-  orb-tests:
-    docker:
-      - image: cimg/base:current
-    steps:
-      - trigger API request to start a workflow using my orb
-
 workflows:
   test-deploy:
     jobs:
