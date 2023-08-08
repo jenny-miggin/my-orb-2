@@ -17,8 +17,12 @@ jobs:
       - checkout
       # Run your orb's commands to validate them.
       - my-orb-2/greet
-      - my-orb-2/terraform-install
-      - my-orb-2/copy-script
+
+  orb-tests:
+    docker:
+      - image: cimg/base:current
+    steps:
+      - trigger API request to start a workflow using my orb
 
 workflows:
   test-deploy:

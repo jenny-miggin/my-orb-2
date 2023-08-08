@@ -6,7 +6,7 @@ description: >
 usage:
   version: 2.1
   orbs:
-    <orb-name>: <namespace>/<orb-name>@1.2.3
+    my-orb: jmi-space/my-orb-2@1.2.3
   parameters:
     my-param:
       type: string
@@ -14,4 +14,5 @@ usage:
   workflows:
     use-my-orb:
       jobs:
-        - <orb-name>/<job-name>
+        - my-orb/hello:
+            my-param: world

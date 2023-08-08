@@ -17,6 +17,15 @@ jobs:
           name: check cli version
           command: circleci version
 
+  test-orb:
+    docker:
+      - image: cimg/base:2023.06
+    steps:
+      - run: 
+          name: do orb things
+          command: |
+            orb things
+
 workflows:
   lint-pack:
     jobs:
@@ -47,5 +56,6 @@ workflows:
           vcs-type: << pipeline.project.type >>
           requires: [orb-tools/publish]
           filters: *filters
+      - test-orb
 
 # VS Code Extension Version: 1.3.0

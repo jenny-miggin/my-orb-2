@@ -1,7 +1,0 @@
-description: >
-  Testing using the terraform orb
-# What will this command do?
-# Descriptions should be short, simple, and clear.
-
-steps:
-  - terraform/install
