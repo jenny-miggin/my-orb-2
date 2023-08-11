@@ -25,5 +25,7 @@ executor:
   resource_class: << parameters.resource_class >>
 
 steps:
-  - echo $CIRCLE_PROJECT_REPONAME
-  - echo << parameters.reponame >>
+  - run:
+      command: echo $CIRCLE_PROJECT_REPONAME
+  - run:
+      command: echo << parameters.reponame >>
