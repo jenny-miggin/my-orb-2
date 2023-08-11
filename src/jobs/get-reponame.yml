@@ -5,7 +5,7 @@ description: >
 parameters:
   reponame:
     type: env_var_name
-    default: $CIRCLE_PROJECT_REPONAME
+    default: CIRCLE_PROJECT_REPONAME
     description: the name of the repo
   resource_class:
     default: large
@@ -29,3 +29,5 @@ steps:
       command: echo $CIRCLE_PROJECT_REPONAME
   - run:
       command: echo << parameters.reponame >>
+  - run:
+      command: echo << pipeline.project.git_url >>
