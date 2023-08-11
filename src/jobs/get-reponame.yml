@@ -35,7 +35,7 @@ steps:
   - persist_to_workspace:
       # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is
       # taken to be the root directory of the workspace.
-      root: $CIRCLE_PROJECT_REPONAME/workspace
+      root: ${CIRCLE_PROJECT_REPONAME}/workspace
       # Must be relative path from root
       paths:
         - echo-output
