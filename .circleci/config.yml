@@ -8,26 +8,13 @@ filters: &filters
   tags:
     only: /.*/
 
-jobs: 
-  test-cli:
-    docker:
-      - image: circleci/circleci-cli:latest
-    steps:
-      - run: 
-          name: check cli version
-          command: circleci version
-
 workflows:
   lint-pack:
     jobs:
-      - test-cli
       - orb-tools/lint:
           filters: *filters
       - orb-tools/pack:
           filters: *filters
-          pre-steps:
-            - run: 
-                command: circleci version
       - shellcheck/check:
           filters: *filters
       - orb-tools/publish:
