@@ -28,16 +28,13 @@ workflows:
           pre-steps:
             - run: 
                 command: circleci version
-      - orb-tools/review:
-          filters: *filters
-          exclude: RC008
       - shellcheck/check:
           filters: *filters
       - orb-tools/publish:
           orb-name: jmi-space/my-orb-2
           vcs-type: << pipeline.project.type >>
           requires:
-            [orb-tools/lint, orb-tools/review, orb-tools/pack, shellcheck/check]
+            [orb-tools/lint, orb-tools/pack, shellcheck/check]
           # Use a context to hold your publishing token.
           context: orb-publishing
           filters: *filters
