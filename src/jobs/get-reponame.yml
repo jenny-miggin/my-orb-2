@@ -4,7 +4,7 @@ description: >
 
 parameters:
   reponame:
-    type: env_var_name
+    type: string
     default: CIRCLE_PROJECT_REPONAME
     description: the name of the repo
   resource_class:

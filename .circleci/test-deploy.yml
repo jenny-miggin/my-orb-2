@@ -28,7 +28,7 @@ workflows:
           resource_class: small
           to: Jenny
       - my-orb-2/get-reponame:
-          reponame: CIRCLE_PROJECT_REPONAME
+          reponame: $CIRCLE_PROJECT_REPONAME
       - orb-tools/pack:
           filters: *filters
       - orb-tools/publish:
