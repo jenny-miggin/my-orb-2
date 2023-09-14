@@ -1,7 +1,7 @@
 version: 2.1
 setup: true
 orbs:
-  orb-tools: circleci/orb-tools@11.1
+  orb-tools: circleci/orb-tools@12.0.4
   shellcheck: circleci/shellcheck@3.1
 
 filters: &filters
@@ -15,6 +15,7 @@ workflows:
           filters: *filters
       - orb-tools/pack:
           filters: *filters
+          org_slug: gh/jenny-miggin
       - shellcheck/check:
           filters: *filters
       - orb-tools/publish:
