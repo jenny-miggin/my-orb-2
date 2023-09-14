@@ -17,10 +17,9 @@ workflows:
           filters: *filters
           org_slug: gh/jenny-miggin
           pre-steps:
-            steps:
-              run: log in to CircleCI
-              command: |
-                circleci setup --no-prompt --token "${CIRCLECI_API_TOKEN}"
+            - run:
+                command: |
+                  circleci setup --no-prompt --token "${CIRCLECI_API_TOKEN}"
           context: cci
       - shellcheck/check:
           filters: *filters
