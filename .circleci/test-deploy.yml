@@ -27,10 +27,13 @@ workflows:
       - my-orb-2/hello:
           resource_class: small
           to: Jenny
-      - my-orb-2/get-reponame:
-          reponame: $CIRCLE_PROJECT_REPONAME
       - orb-tools/pack:
           filters: *filters
+          pre-steps:
+            - run:
+                command: |
+                  circleci setup --no-prompt --token "${CIRCLECI_API_TOKEN}"
+          context: cci
       - orb-tools/publish:
           orb-name: jmi-space/my-orb-2
           vcs-type: << pipeline.project.type >>
