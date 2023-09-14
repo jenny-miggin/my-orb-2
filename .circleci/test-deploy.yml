@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   my-orb-2: jmi-space/my-orb-2@dev:<<pipeline.git.revision>>
-  orb-tools: circleci/orb-tools@11.1
+  orb-tools: circleci/orb-tools@12.0.4
 
 filters: &filters
   tags:
@@ -29,15 +29,16 @@ workflows:
           to: Jenny
       - orb-tools/pack:
           filters: *filters
+          org_slug: gh/jenny-miggin
           pre-steps:
             - run:
                 command: |
                   circleci setup --no-prompt --token "${CIRCLECI_API_TOKEN}"
           context: cci
       - orb-tools/publish:
-          orb-name: jmi-space/my-orb-2
-          vcs-type: << pipeline.project.type >>
-          pub-type: production
+          orb_name: jmi-space/my-orb-2
+          vcs_type: << pipeline.project.type >>
+          pub_type: production
           requires:
             - orb-tools/pack
             - command-tests
