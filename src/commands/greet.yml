@@ -8,8 +8,5 @@ parameters:
     default: "World"
     description: "Hello to whom?"
 steps:
-  - run:
-      environment:
-        PARAM_TO: <<parameters.to>>
-      name: Hello Greeting
-      command: <<include(scripts/greet.sh)>>
+  -  orb1/greet:
+      to: orb2
