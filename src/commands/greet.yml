@@ -9,4 +9,4 @@ parameters:
     description: "Hello to whom?"
 steps:
   -  orb1/greet:
-      to: orb2 again
+      to: orb2
