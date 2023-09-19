@@ -37,6 +37,5 @@ workflows:
           pipeline_number: << pipeline.number >>
           vcs_type: << pipeline.project.type >>
           requires: [orb-tools/publish]
+          attach_workspace: true
           filters: *filters
-
-# VS Code Extension Version: 1.3.0
