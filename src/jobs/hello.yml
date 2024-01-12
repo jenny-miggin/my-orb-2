@@ -20,9 +20,13 @@ parameters:
     - 2xlarge+
     type: enum
 
-executor:
-  name: default
-  resource_class: << parameters.resource_class >>
+# executor:
+#   name: default
+#   resource_class: << parameters.resource_class >>
+
+docker:
+  - image: cimg/base:2021.01
+resource_class: small
 
 steps:
   - greet:

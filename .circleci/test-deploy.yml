@@ -25,7 +25,6 @@ workflows:
       - command-tests:
           filters: *filters
       - my-orb-2/hello:
-          resource_class: small
           to: Jenny
       - orb-tools/pack:
           filters: *filters
