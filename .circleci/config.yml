@@ -15,7 +15,7 @@ workflows:
           filters: *filters
       - orb-tools/pack:
           filters: *filters
-          org_slug: gh/jenny-miggin
+          org_id: c892e553-ef13-4e2d-8a95-849e44c5293c
           # pre-steps:
           #   - run:
           #       command: |
