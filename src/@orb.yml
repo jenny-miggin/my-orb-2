@@ -13,4 +13,3 @@ display:
 # If your orb requires other orbs, you can import them like this. Otherwise remove the "orbs" stanza.
 orbs:
  orb1: jmi-space/my-orb-1@0
- kraken: krakentech/ci-orb-data-utils@0.0.2
