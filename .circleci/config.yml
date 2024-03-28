@@ -15,7 +15,7 @@ workflows:
           filters: *filters
       - orb-tools/pack:
           filters: *filters
-          # org_slug: gh/jenny-miggin
+          org_slug: gh/jenny-miggin
           # pre-steps:
           #   - run:
           #       command: |
